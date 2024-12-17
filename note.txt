@@ -1,5 +1,7 @@
 Project Structure
 
+dashboard/
+  index.php
 course/
   index.php, create.php, edit.php
 teacher/
