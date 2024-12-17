@@ -1,5 +1,6 @@
 <?php
-  include_once '../config/app.php'
+  include_once '../config/app.php';
+  include_once '../config/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,10 @@
 <body>
   <a href="<?= $base_url ?>/course/create.php">New Course</a>
   <h1>Course List</h1>
+  <?php
+    $sql = "SELECT * FROM courses";
+    $result = $conn->query($sql);
+  ?>
   <table border="1">
     <thead>
       <tr>
@@ -22,13 +27,22 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-      </tr>
+      <?php
+        while($row = $result->fetch_assoc()) {
+      ?>
+        <tr>
+          <td><?= $row["id"] ?></td>
+          <td><?= $row["name"] ?></td>
+          <td><?= $row["description"] ?></td>
+          <td><?= $row["created_at"] ?></td>
+          <td>
+            <a href="">Edit</a>
+            <a href="">Delete</a>
+          </td>
+        </tr>
+      <?php
+        }
+      ?>
     </tbody>
   </table>
 </body>
