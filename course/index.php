@@ -36,8 +36,8 @@
           <td><?= $row["description"] ?></td>
           <td><?= $row["created_at"] ?></td>
           <td>
-            <a href="">Edit</a>
-            <a href="">Delete</a>
+            <a href="<?= $base_url ?>/course/edit.php?id=<?= $row['id'] ?>">Edit</a>
+            <a href="<?= $base_url ?>/course/delete.php?id=<?= $row['id'] ?>">Delete</a>
           </td>
         </tr>
       <?php
