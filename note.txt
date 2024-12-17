@@ -1,0 +1,13 @@
+Project Structure
+
+course/
+  index.php, create.php, edit.php
+teacher/
+  index.php, create.php, edit.php
+student/
+  index.php, create.php, edit.php
+class/
+  index.php, create.php, edit.php
+config/
+  db.php
+  app.php
