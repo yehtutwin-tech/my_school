@@ -1,3 +1,7 @@
+<?php
+  include_once '../config/app.php';
+  include_once '../config/db.php';
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 

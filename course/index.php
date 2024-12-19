@@ -1,22 +1,19 @@
 <?php
-  include_once '../config/app.php';
-  include_once '../config/db.php';
+  include_once '../partials/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course List</title>
-</head>
-<body>
-  <a href="<?= $base_url ?>/course/create.php">New Course</a>
-  <h1>Course List</h1>
+  <h1 class="my-3">
+    Course List
+    <a
+      class="btn btn-primary float-end"
+      href="<?= $base_url ?>/course/create.php">
+      + New Course
+    </a>
+  </h1>
   <?php
     $sql = "SELECT * FROM courses";
     $result = $conn->query($sql);
   ?>
-  <table border="1">
+  <table class="table table-bordered table-striped">
     <thead>
       <tr>
         <th>Id</th>
@@ -45,5 +42,6 @@
       ?>
     </tbody>
   </table>
-</body>
-</html>
+<?php
+  include_once '../partials/footer.php';
+?>

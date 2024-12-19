@@ -1,14 +1,14 @@
 <?php
-  include_once '../config/db.php';
+  include_once '../partials/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Create</title>
-</head>
-<body>
+  <h1 class="my-3">
+    <a
+      class="btn btn-outline-secondary"
+      href="<?= $base_url ?>/course/index.php">
+      &larr;
+    </a>
+    Course Create
+  </h1>
   <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $name = $_POST['name'];
@@ -26,11 +26,12 @@
   ?>
 
   <form method="post">
-    <input type="text" name="name" />
+    <input type="text" name="name" class="form-control" placeholder="Title..." />
     <br/>
-    <textarea name="description"></textarea>
+    <textarea name="description" class="form-control" placeholder="Outline..." rows="5"></textarea>
     <br/>
-    <button type="submit">Create</button>
+    <button type="submit" class="btn btn-primary">Create</button>
   </form>
-</body>
-</html>
+<?php
+  include_once '../partials/footer.php';
+?>
