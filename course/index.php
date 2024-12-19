@@ -33,8 +33,13 @@
           <td><?= $row["description"] ?></td>
           <td><?= $row["created_at"] ?></td>
           <td>
-            <a href="<?= $base_url ?>/course/edit.php?id=<?= $row['id'] ?>">Edit</a>
-            <a href="<?= $base_url ?>/course/delete.php?id=<?= $row['id'] ?>">Delete</a>
+            <a
+              class="btn btn-warning"
+              href="<?= $base_url ?>/course/edit.php?id=<?= $row['id'] ?>">Edit</a>
+
+            <a
+              class="btn btn-danger"
+              href="<?= $base_url ?>/course/delete.php?id=<?= $row['id'] ?>">Delete</a>
           </td>
         </tr>
       <?php
