@@ -13,3 +13,8 @@ class/
 config/
   db.php
   app.php
+
+
+auth (login, register, logout)
+class listing (join)
+fontawesome integration
