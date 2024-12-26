@@ -176,7 +176,7 @@
 
 
   <main class="form-signin w-100 m-auto">
-    <form>
+    <form method="post" action="process.php?action=register">
       <img class="mb-4" src="../assets/bootstrap-logo.svg" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">Please register</h1>
 
@@ -205,7 +205,7 @@
       </div>
       <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
       
-      <a href="register.php" class="d-block mt-3 text-center">Sign in</a>
+      <a href="login.php" class="d-block mt-3 text-center">Sign in</a>
 
       <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
     </form>
