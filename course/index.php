@@ -31,15 +31,21 @@
           <td><?= $row["id"] ?></td>
           <td><?= $row["name"] ?></td>
           <td><?= $row["description"] ?></td>
-          <td><?= $row["created_at"] ?></td>
+          <td><?= date('M d, h:i A', strtotime($row["created_at"])) ?></td>
           <td>
             <a
               class="btn btn-warning"
-              href="<?= $base_url ?>/course/edit.php?id=<?= $row['id'] ?>">Edit</a>
+              href="<?= $base_url ?>/course/edit.php?id=<?= $row['id'] ?>">
+              <i class="fa-solid fa-pen-to-square"></i>
+              Edit
+            </a>
 
             <a
               class="btn btn-danger"
-              href="<?= $base_url ?>/course/delete.php?id=<?= $row['id'] ?>">Delete</a>
+              href="<?= $base_url ?>/course/delete.php?id=<?= $row['id'] ?>">
+              <i class="fa-solid fa-trash"></i>
+              Delete
+            </a>
           </td>
         </tr>
       <?php
