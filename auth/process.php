@@ -2,6 +2,11 @@
 session_start();
 include_once '../config/db.php';
 
+function logout() {
+  session_destroy();
+  header('Location: login.php');
+}
+
 function login($conn) {
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: register.php');
@@ -68,7 +73,7 @@ switch ($action) {
     login($conn);
     break;
   case 'logout':
-    echo 'logout';
+    logout();
     break;
   default:
     echo 'default';
