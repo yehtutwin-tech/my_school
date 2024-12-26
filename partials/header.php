@@ -1,4 +1,11 @@
 <?php
+  session_start();
+
+  if (!isset($_SESSION['isLoggedIn'])) {
+    header('Location: ../auth/login.php');
+    exit();
+  }
+
   include_once '../config/app.php';
   include_once '../config/db.php';
 ?>
