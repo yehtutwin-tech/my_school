@@ -18,12 +18,15 @@
       if (isset($_FILES['image'])) {
         $file = $_FILES['image'];
 
+        $ext = explode(".", $file['name']);
+        $new_filename = time() . '.' . end($ext);
+
         move_uploaded_file(
           $file['tmp_name'],
-          '../assets/foods/' . $file['name']
+          '../assets/foods/' . $new_filename,
         );
 
-        $image = $file['name'];
+        $image = $new_filename;
       }
 
       $sql = "INSERT INTO foods (name, description, image)

@@ -1,14 +1,14 @@
 <?php
   include_once '../partials/header.php';
 ?>
-  <h1 class="my-3">
-    Course List
-    <a
-      class="btn btn-primary float-end"
-      href="<?= $base_url ?>/course/create.php">
-      + New Course
-    </a>
-  </h1>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Course List</h1>
+  <a
+    class="btn btn-primary float-end"
+    href="<?= $base_url ?>/course/create.php">
+    + New Course
+  </a>
+</div>
   <?php
     $sql = "SELECT * FROM courses";
     $result = $conn->query($sql);
